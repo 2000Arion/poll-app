@@ -5,8 +5,12 @@ from django.utils import timezone
 
 
 class Question(models.Model):
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField("date published")
+    question_text = models.CharField(max_length=200, verbose_name="Frage")
+    pub_date = models.DateTimeField("Veröffentlichungsdatum")
+
+    class Meta:
+        verbose_name = "Frage"
+        verbose_name_plural = "Fragen"
 
     def __str__(self):
         return self.question_text
@@ -16,9 +20,13 @@ class Question(models.Model):
 
 
 class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name="Frage")
+    choice_text = models.CharField(max_length=200, verbose_name="Antwortmöglichkeit")
+    votes = models.IntegerField(default=0, verbose_name="Stimmen")
+
+    class Meta:
+        verbose_name = "Antwortmöglichkeit"
+        verbose_name_plural = "Antwortmöglichkeiten"
 
     def __str__(self):
         return self.choice_text
