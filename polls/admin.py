@@ -12,8 +12,8 @@ class ChoiceInline(admin.TabularInline):
         return format_html(
             '<input type="checkbox" name="reset_votes_{}" />', obj.pk
         )
-    reset_votes.short_description = "Stimmen zurücksetzen"
-    fields = ('reset_votes', 'choice_text', 'votes')
+
+    fields = ('choice_text', 'votes', 'reset_votes')
 
     def save_model(self, request, obj, form, change):
         if f"reset_votes_{obj.pk}" in request.POST:
