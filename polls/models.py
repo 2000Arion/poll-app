@@ -23,7 +23,6 @@ class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name="Frage")
     choice_text = models.CharField(max_length=200, verbose_name="Antwortmöglichkeit")
     votes = models.IntegerField(default=0, verbose_name="Stimmen")
-    reset_votes = models.BooleanField(default=False, verbose_name="Stimmen zurücksetzen")
 
     class Meta:
         verbose_name = "Antwortmöglichkeit"
