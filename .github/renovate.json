@@ -6,7 +6,7 @@
   "dependencyDashboard": true,
   "packageRules": [
     {
-      "managers": ["pip"],
+      "managers": ["pip_requirements"],
       "packageNames": [
         "asgiref",
         "Django",
@@ -17,8 +17,5 @@
       "updateTypes": ["minor", "patch"],
       "labels": ["dependencies"]
     }
-  ],
-  "pip": {
-    "automerge": true
-  }
+  ]
 }
