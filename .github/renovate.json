@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "config:base",
+    "python/python"
+  ],
+  "dependencyDashboard": true,
+  "packageRules": [
+    {
+      "managers": ["pip"],
+      "packageNames": [
+        "asgiref",
+        "Django",
+        "sqlparse",
+        "tzdata"
+      ],
+      "enabled": true,
+      "updateTypes": ["minor", "patch"],
+      "labels": ["dependencies"]
+    }
+  ],
+  "pip": {
+    "automerge": true
+  }
+}
