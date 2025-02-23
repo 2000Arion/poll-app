@@ -3,6 +3,7 @@
     "config:base"
   ],
   "dependencyDashboard": true,
+  "pruneStaleBranches": true,
   "packageRules": [
     {
       "managers": ["pip_requirements"],
@@ -14,8 +15,7 @@
       ],
       "enabled": true,
       "updateTypes": ["minor", "patch"],
-      "labels": ["dependencies"],
-      "pruneStaleBranches": true
+      "labels": ["dependencies"]
     }
   ]
 }
