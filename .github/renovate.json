@@ -14,7 +14,8 @@
       ],
       "enabled": true,
       "updateTypes": ["minor", "patch"],
-      "labels": ["dependencies"]
+      "labels": ["dependencies"],
+      "pruneStaleBranches": true
     }
   ]
 }
